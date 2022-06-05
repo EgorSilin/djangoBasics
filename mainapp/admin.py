@@ -14,6 +14,7 @@ class LessonAdmin(admin.ModelAdmin):
     list_display = ["id", "get_course_name", "num", "title", "deleted"]
     ordering = ["-course__name", "-num"]
     list_per_page = 5
+    list_filter = ["course", "created", "deleted"]
 
     def get_course_name(self, obj):
         return obj.course.name
