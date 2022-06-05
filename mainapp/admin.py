@@ -6,7 +6,7 @@ from mainapp import models as mainapp_models
 
 @admin.register(mainapp_models.News)
 class NewsAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ["title", "preambule", "body"]
 
 
 @admin.register(mainapp_models.Lesson)
