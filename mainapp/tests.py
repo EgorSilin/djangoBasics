@@ -9,6 +9,10 @@ from mainapp import models as mainapp_models
 import pickle
 from unittest import mock
 
+from django.core import mail as django_mail
+
+from mainapp import tasks as mainapp_tasks
+
 
 class TestNewsPage(TestCase):
     fixtures = (
@@ -117,3 +121,13 @@ class TestCoursesWithMock(TestCase):
             result = self.client.get(path)
             self.assertEqual(result.status_code, HTTPStatus.OK)
             self.assertTrue(mocked_cache.called)
+
+
+class TestTaskMailSend(TestCase):
+    fixtures = ("authapp/fixtures/001_user_admin.json",)
+
+    def test_mail_send(self):
+        message_text = "test_message_text"
+        user_obj = authapp_models.CustomUser.objects.first()
+        mainapp_tasks.send_feedback_mail({"user_id": user_obj.id, "message": message_text})
+        self.assertEqual(django_mail.outbox[0].body, message_text)
