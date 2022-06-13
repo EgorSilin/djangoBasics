@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-13 17:50+0000\n"
+"POT-Creation-Date: 2022-06-13 18:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,37 +21,37 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgid "Please, enter a valid age!"
-msgstr ""
+msgstr "Пожалуйста, введите корректный возраст"
 
 msgid "username"
-msgstr ""
+msgstr "Имя пользователя"
 
 msgid "Required. 150 characters or fewer. ASCII letters and digits only."
-msgstr ""
+msgstr "Обязательное поле. До 150 символов. Только ASCII символы и цифры"
 
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "Пользователь с таким именем уже существует"
 
 msgid "first name"
-msgstr ""
+msgstr "Имя"
 
 msgid "last name"
-msgstr ""
+msgstr "Фамилия"
 
 msgid "email address"
-msgstr ""
+msgstr "Адрес электронной почты"
 
 msgid "A user with that email address already exists."
-msgstr ""
+msgstr "Пользователь с таким адресом электронной почты уже существует"
 
 msgid "staff status"
-msgstr ""
+msgstr "Статус обслуживающего персонала"
 
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
 msgid "active"
-msgstr ""
+msgstr "Активен"
 
 msgid ""
 "Designates whether this user should be treated as active.             "
@@ -59,77 +59,77 @@ msgid ""
 msgstr ""
 
 msgid "date joined"
-msgstr ""
+msgstr "Дата регистрации"
 
 msgid "user"
-msgstr ""
+msgstr "Пользователь"
 
 msgid "users"
-msgstr ""
+msgstr "Пользователи"
 
 #, python-format
 msgid "Login success!<br>Hi, %(username)s"
 msgstr ""
 
 msgid "See you later!"
-msgstr ""
+msgstr "До скорых встреч!"
 
 msgid "Course"
-msgstr ""
+msgstr "Курс"
 
 msgid "Mark deleted"
-msgstr ""
+msgstr "Помечен удалённым"
 
 msgid "Enter your message"
-msgstr ""
+msgstr "Введите Ваше сообщение"
 
 msgid "Message"
-msgstr ""
+msgstr "Сообщение"
 
 msgid "News"
-msgstr ""
+msgstr "Новости"
 
 msgid "User"
-msgstr ""
+msgstr "Пользователь"
 
 msgid "No feedback"
-msgstr ""
+msgstr "Без отзыва"
 
 msgid "Feedback"
-msgstr ""
+msgstr "Отзыв"
 
 msgid "Rating"
-msgstr ""
+msgstr "Рейтинг"
 
 msgid "Lesson"
-msgstr ""
+msgstr "Урок"
 
 msgid "Lessons"
-msgstr ""
+msgstr "Уроки"
 
 msgid "Teacher"
-msgstr ""
+msgstr "Преподаватель"
 
 msgid "Teachers"
-msgstr ""
+msgstr "Преподаватели"
 
 msgid "Message sended"
-msgstr ""
+msgstr "Сообщение отправлено"
 
 msgid "You can send only one message per 5 minutes"
-msgstr ""
+msgstr "Вы можете послать сообщение раз в 5 минут"
 
 msgid "Django site admin"
-msgstr ""
+msgstr "Административный раздел сайта"
 
 msgid "Courses"
-msgstr ""
+msgstr "Курсы"
 
 msgid "Profile"
-msgstr ""
+msgstr "Профиль"
 
 msgid "Enter"
-msgstr ""
+msgstr "Вход"
 
 msgid "Contacts"
-msgstr ""
+msgstr "Контакты"
