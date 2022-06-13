@@ -6,6 +6,9 @@ from django.urls import reverse
 from authapp import models as authapp_models
 from mainapp import models as mainapp_models
 
+import pickle
+from unittest import mock
+
 
 class TestNewsPage(TestCase):
     fixtures = (
@@ -94,3 +97,23 @@ class TestNewsPage(TestCase):
         self.client_with_auth.post(path)
         news_obj.refresh_from_db()
         self.assertTrue(news_obj.deleted)
+
+
+class TestCoursesWithMock(TestCase):
+    fixtures = (
+        "authapp/fixtures/001_user_admin.json",
+        "mainapp/fixtures/002_courses.json",
+        "mainapp/fixtures/003_lessons.json",
+        "mainapp/fixtures/004_teachers.json",
+    )
+
+    def test_page_open_detail(self):
+        course_obj = mainapp_models.Courses.objects.get(pk=1)
+        path = reverse("mainapp:courses_detail", args=[course_obj.pk])
+        with open("mainapp/fixtures/005_feedback_list_1.bin", "rb") as inpf, mock.patch(
+                "django.core.cache.cache.get"
+        ) as mocked_cache:
+            mocked_cache.return_value = pickle.load(inpf)
+            result = self.client.get(path)
+            self.assertEqual(result.status_code, HTTPStatus.OK)
+            self.assertTrue(mocked_cache.called)
